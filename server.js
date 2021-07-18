@@ -10,7 +10,7 @@ app.use(express.json());
 // Express.js middleware
 app.use(express.static('public'));
 //required  note data
-//const { noteData } = require('./db/db');
+const { noteData } = require('./db/db');
 
 //add test route
 // test #1
@@ -20,20 +20,31 @@ app.get('/api/noteData', (req, res) => {
 });
 */
 // test #2 use db.json
-/*
-app.get('/api/noteData', (req, res) => {
+
+app.get('/api/notes', (req, res) => {
     res.json(noteData);
 });
-*/
+
 
 // test 3#  display index page
-// require index.html page
-app.get('/', (req, res) => {
+
+
+  app.get('/notes', (req, res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+  });
+  // require index.html page
+  app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './index.html'));
   });
-
-
-// setup server port
+// create a GET route  that returns all of the notes
+/*
+app.get('/notes', (req, res) => {
+    let results = noteData;
+    console.log(req.query)
+    res.json(results)
+})
+*/
+  // setup server port
 app.listen(PORT,() => {
     console.log (`API server now on port  ${PORT}!`);
 });
