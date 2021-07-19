@@ -1,17 +1,1 @@
-{
-    "noteData": [
-        {
-            "id":"1",
-            "title":"Test Title",
-            "text":"Test text"
-            
-        },
-        {
-            "id":"2",
-            "title":"testMe",
-            "text":"do you see me????"
-            
-        }
-    ]
-    
-}
+{"noteData":[{"title":"Note 3","text":"Noto note 3","id":"6fa4def1abbb2b368cd13057fc1e6f5f"},{"title":"Note 1","text":"new note 1","id":"81c8bc99743a55054f80e97461ae2b31"},{"title":"note 3","text":"new note 3","id":"dc2f338e10fbc8af763082393796a5e7"}]}
